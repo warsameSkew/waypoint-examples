@@ -10,8 +10,9 @@ This repo uses a basic Ruby based application. All files you need for the applic
 
 This walkthrough assumes the following...
 
-- You have obtained the `waypoint` binary
-- You have access to the waypoint server image in the GitHub docker image repository
+- You have cloned this `Waypoint Examples` repository
+- You have obtained the `Waypoint` binary
+- You have access to the Waypoint server image in the GitHub docker image repository
 - You have installed [Docker for Desktop](https://www.docker.com/products/docker-desktop)
 
 ## First Steps
