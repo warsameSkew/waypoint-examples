@@ -11,10 +11,24 @@ env:
   WAYPOINT_SERVER_TLS: 1
   WAYPOINT_SERVER_TLS_SKIP_VERIFY: 1
 
-steps:
-  - uses: actions/checkout@v2
-  - uses: hashicorp/action-setup-waypoint
-    with:
-      version: '0.1.0'
-- run: waypoint init
-- run: waypoint build
+jobs:
+  bp:
+    name: Build and push
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: setup waypoint
+        uses: hashicorp/action-setup-waypoint
+        with:
+            version: '0.1.0'
+     
+     - name: Waypoint init
+       run : waypoint init
+
+     - name: Waypoint build
+       run : waypoint build
+                       
+            
